@@ -1,0 +1,15 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+	required = true
+[user]
+	name = Dave Ashe
+	email = dave.ashe@addepar.com
+[push]
+	default = current
+[branch]
+	autosetuprebase = always
+[alias]
+	co = checkout
+	br = branch

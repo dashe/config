@@ -86,6 +86,8 @@ alias greb='git rebase origin/master'
 alias git_cleanup_deleted='git fetch --prune origin'
 alias mergeallmasterupdates='git merge origin/master'
 
+alias glo='git log --oneline'
+
 alias ssv='git stash save'
 
 # navigation & listing
