@@ -55,8 +55,9 @@ alias resource='. ~/.bashrc'
 alias cda='cd ~/Addepar/AMP'
 
 # Iverson / Ember
-alias cdi='cd ~/Addepar/Iverson'
+alias cdi='cd ~/Addepar/Iverson/iverson'
 alias runui='cdi && yarn && ember s'
+alias eslint='./node_modules/eslint/bin/eslint.js app tests'
 
 # buck
 alias cdb='cd ~/Addepar/buck'
@@ -71,16 +72,21 @@ alias lb='git checkout -'
 
 alias ga='git add'
 alias gaa='git add .'
-alias gcom='git commit'
-alias gaac='git commit -a'
 alias gpush='git push'
 alias forcepush='git push -f'
+
+alias gcom='_gcom() { echo Committing staged changes with following merge comment: ; echo $@ ; echo ; git commit --message='"'"'$@'"'"' ; }; _gcom'
+alias gaac='_gaac() { echo Committing all changes with following merge comment: ; echo $@ ; echo ; git commit -a --message='"'"'$@'"'"' ; }; _gaac'
+alias bang='_bang() { echo Committing all changes with following merge comment: ; echo $1 ; echo ; git commit --dry-run -a --message='"'"'$1'"'"' ; git push }; _bang'
 
 alias goma='git checkout master'
 alias upma='goma ; git pull'
 alias greb='git rebase origin/master'
 
 alias git_cleanup_deleted='git fetch --prune origin'
+alias mergeallmasterupdates='git merge origin/master'
+
+alias ssv='git stash save'
 
 # navigation & listing
 alias ll='ls -lsa'
