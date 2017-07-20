@@ -75,8 +75,8 @@ alias gaa='git add .'
 alias gpush='git push'
 alias forcepush='git push -f'
 
-alias gcom='_gcom() { echo Committing staged changes with following merge comment: ; echo $@ ; echo ; git commit --message='"'"'$@'"'"' ; }; _gcom'
-alias gaac='_gaac() { echo Committing all changes with following merge comment: ; echo $@ ; echo ; git commit -a --message='"'"'$@'"'"' ; }; _gaac'
+alias gcom='_gcom() { echo Committing staged changes with following merge comment: ; echo $1 ; echo ; git commit --message="$1" ; }; _gcom'
+alias gaac='_gaac() { echo Committing all changes with following merge comment: ; echo $1 ; echo ; git commit -a --message='"'"'$1'"'"' ; }; _gaac'
 alias bang='_bang() { echo Committing all changes with following merge comment: ; echo $1 ; echo ; git commit --dry-run -a --message='"'"'$1'"'"' ; git push }; _bang'
 
 alias goma='git checkout master'
