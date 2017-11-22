@@ -56,6 +56,7 @@ alias hist='history'
 
 # AMP
 alias cda='cd ~/Addepar/AMP'
+alias cda2='cd ~/Addepar/AMP2'
 
 # Salt
 alias cdsa='cd ~/Addepar/salt'
@@ -66,6 +67,7 @@ alias cdec='cd ~/Addepar/ember-charts'
 # Iverson / Ember
 alias cdi='cd ~/Addepar/Iverson/iverson'
 alias runui='cdi && yarn && ember s'
+alias runlatestmaster='cdi && upma && runui'
 alias eslint='./node_modules/eslint/bin/eslint.js'
 alias eslintall='./node_modules/eslint/bin/eslint.js app tests'
 alias embertest='ember test --server'
@@ -117,6 +119,7 @@ alias bp='./buck project'
 alias bt='./buck test' # runs all 'fast' tests
 alias bc='./buck clean'
 alias buckall='./buck clean && ./buck project'
+alias bcap='buckall'
 alias buckjooq='./buck build //infra/service/ampdb:jooq'
 
 alias checkstyle='./buck build //Common:checkstyle ; ./buck build //Server:checkstyle ; ./buck build //rest-api-server:checkstyle'
